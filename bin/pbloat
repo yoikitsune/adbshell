@@ -1,0 +1,31 @@
+#!/usr/bin/php
+<?php
+	include (realpath (dirname (__FILE__) . "/../include.php"));
+	
+	if ($handler->pmGetEnabledPackages ($enablePackages)) {
+		$bloatwares = array ();
+		$handle = fopen($handler->path."/bloatware-list.txt", "r");
+		if ($handle) {
+			while (($buffer = fgets($handle)) !== false) {
+				if (preg_match ("/^([a-z]+(\.[^\. ]+)+)( [ \|\-:] (.*))?/", $buffer, $m)) {
+					$bloatwares [trim ($m[1])] = (count ($m)==5?$m[4]:"");
+				}
+			}
+			if (!feof($handle)) {
+				echo "Erreur: fgets() a échoué\n";
+				die;
+			}
+			fclose($handle);
+		}
+		$toDisable = array ();
+		foreach ($enablePackages as $package) {
+			if (array_key_exists ($package, $bloatwares)) {
+				$toDisable [] = $package;
+				echo $package . "\t" . $bloatwares [$package] . "\n";
+			}
+		}
+		if (readline ("Désactiver les ". count ($toDisable) . " éléments ?") == "o") {
+			$handler->pmDisablePackages ($toDisable);
+		}
+	}
+?>

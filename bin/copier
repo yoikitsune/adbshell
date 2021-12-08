@@ -1,0 +1,27 @@
+#!/bin/sh
+echo $@
+exit
+. $APP_CONFIG
+case $1 in
+	video)
+		source="$base_source/Videos"
+		target="$base_target/Movies"
+	;;
+	audio)
+		source="$base_source/Videos/new"
+		target="$base_target/Movies"
+	;;
+	*)
+		source=$1
+		target=$2
+	;;
+esac
+source="$source/$2"
+if [ ! -f "$source" ]; then
+	echo "Le fichier $source n'existe pas."
+	exit
+fi
+if [ ! -d "$target" ]; then
+	echo "Le répertoire de destination n'existe pas"
+fi
+echo /usr/bin/adb push "$source" "$target"

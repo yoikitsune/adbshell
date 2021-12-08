@@ -1,0 +1,13 @@
+#!/usr/bin/php
+<?php
+	include (realpath (dirname (__FILE__) . "/../include.php"));
+	$h = $handler->history->get ();
+	if (count ($h) > 0) {
+		echo implode ("\n", $h);
+		if (readline ("Restaurer les ". count ($h) . " éléments ?") == "o")
+			echo "ok\n";
+		else
+			echo "ko\n";
+		//$handler->history->restore ();
+	}
+?>

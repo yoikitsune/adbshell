@@ -1,0 +1,124 @@
+com.baidu.input_huawei | Chinese keyboard
+com.huawei.appmarket | Huawei Market app
+com.huawei.android.chr | HwChrService
+com.huawei.android.FloatTasks | Floating dock function
+com.huawei.android.hsf | Huawei Services Framework
+com.huawei.android.hwpay | Huawei Pay
+com.huawei.android.karaoke | Karaoke mode
+com.huawei.android.mirrorshare | MirrorShare feature
+com.huawei.android.remotecontroller | Huawei Smart Controller
+com.huawei.search | HiSearch
+com.huawei.stylus.floatmenu | Floating menu
+com.huawei.android.tips | Huawei Tips
+com.huawei.android.totemweather | Huawei Weather
+com.huawei.arengine.service | Augmented reality service
+com.huawei.browser | Huawei Browser
+com.huawei.contactscamcard | Business card reader
+com.huawei.compass | Huawei Compass
+com.huawei.desktop.explorer | Service that is been used when you wanna use your phone as an OS on a PC
+com.huawei.fido.uafclient | Fast ID Online function
+com.huawei.gameassistant | Huawei Game Suite (HiGame)
+com.huawei.geofence | Geofence service
+com.huawei.hdiw | Huawei ID app
+com.huawei.hifolder | Huawei Online Cloud folder service
+com.huawei.himovie.overseas | Huawei Videos App
+com.huawei.hitouch | Floating dock by Huawei
+com.huawei.hwdetectrepair | Huawei Smart diagnosis app
+com.huawei.iaware | hUAWEI infp app
+com.huawei.livewallpaper.paradise | Live wallpaper service
+com.huawei.parentcontrol | Parental controls functions
+com.huawei.pcassistant | HiSuite service
+com.huawei.phoneservice | HiCare app
+com.huawei.mirror - Huawei Mirror app
+com.huawei.screenrecorder | Huawei Screen recorder feature
+com.huawei.vassistant | Huawei Voice Assistant
+com.huawei.videoeditor | Video editor function
+com.huawei.wallet | Huawei Wallet
+com.huawei.watch.sync | Huawei Watch sync function
+com.iflytek.speechsuite | Default voice input method
+
+Android Bloatware List
+
+com.android.bips | Print Service
+com.android.calculator2 | Calculator app
+#com.android.calendar | Calendar app
+com.android.carrierconfig | Carrier-specific configuration
+com.android.cellbroadcastreceiver | Cell Broadcast
+com.android.dreams.basic | Screensaver mode
+com.android.dreams.phototable | Photo screensaver
+com.android.egg |Android build's easter egg feature
+com.android.email | Stock email app
+com.android.emergency | Emergency Contacts
+com.android.exchange | Non-Gmail email support
+com.android.gallery3d | Gallery
+com.android.htmlviewer | In-built HTML viewer
+com.android.hotwordenrollment.okgoogle | "OK Google" detection service
+com.android.magicsmoke | Live wallpaper
+com.android.managedprovisioning
+com.android.mediacenter | EMUI or Huawei Music app
+com.android.mms | SMS app
+com.android.mms.service | MMS app
+com.android.noisefield | Live wallpaper
+com.android.phasebeam | Wallpaper
+com.android.printservice.reccomendation |  Mobile Printing service
+com.android.pacprocessor | Proxy auto-configuration
+com.android.phone.recorder | Call recorder
+com.android.printspooler | Mobile printing service
+com.android.providers.blockednumber | Storage of blocked numbers
+#com.android.providers.calendar | Calendar sync
+com.android.providers.partnerbookmarks | Google Chrome bookmarking service
+com.android.providers.userdictionary | Dictionary for keyboard apps
+com.android.quicksearchbox | Search box
+com.android.soundrecorder | Sound recorder
+com.android.stk | SIM Toolkit
+#com.android.vending | Google Play Store
+com.android.voicedialer | Voice search
+com.android.vpndialogs | VPN system
+com.android.wallpaper.holospiral | Live wallpaper
+com.android.wallpaper.livepicker | Wallpaper picker
+com.android.wallpapercropper | Wallpaper cropper
+com.example.android.notepad | Notepad
+
+Pre-installed Google Apps on Huawei
+
+com.google.android.apps.books | Google Books
+com.google.android.apps.cloudprint | Cloud print
+com.google.android.apps.currents | Currents
+com.google.android.apps.docs | Google Drive
+com.google.android.apps.fitness | Google Fit
+com.google.android.apps.mapps | Google Maps
+com.google.android.apps.photos | Google Photos
+com.google.android.apps.tachyon | Google Duo
+com.google.android.apps.wallpaper | Google Wallpapers
+com.google.android.apps.wellbeing | Digital Wellbeing
+com.google.android.feedback | Google Feedback
+com.google.android.googlequicksearchbox | Google Search
+#com.google.android.gm | Gmail
+com.google.ar.core | Google ARCore
+com.google.marvin.talkback | Talkback
+#com.google.android.play.games | Google Play Games
+com.google.android.street | Google Street View
+com.google.android.videos | Google Play Movies
+com.google.android.youtube | YouTube
+com.google.tango.measure | Google Measure
+
+Miscellaneous 3rd-party Apps on Huawei devices
+
+com.amazon.aa
+com.amazon.aa.attribution
+com.booking - Booking.com
+com.ebay.mobile - eBay
+com.facebook.appmanager
+com.facebook.system
+com.facebook.orca
+com.facebook.katana
+com.facebook.services
+com.instagram.android
+com.netflix.mediaclient
+com.netflix.partner.activation
+com.microsoft.translator
+com.snapchat.android
+com.swiftkey.swiftkeyconfigurator
+com.touchtype.swiftkey
+com.twitter.android
+org.smsalliance.openmobileapi.service - SmartcardService

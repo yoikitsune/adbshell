@@ -1,0 +1,5 @@
+#!/usr/bin/php
+<?php
+	include (realpath (dirname (__FILE__) . "/../include.php"));
+	$handler->pmDisablePackage ($argv [1]);
+?>

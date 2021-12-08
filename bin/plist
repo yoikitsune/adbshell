@@ -1,0 +1,19 @@
+#!/usr/bin/php
+<?php
+	include (realpath (dirname (__FILE__) . "/../include.php"));
+	if ($handler->pmGetPackages ($packages, "-f")) {
+		$result = array ();
+		foreach ($packages as $p) {
+			echo $p . "\n";
+			preg_match ("/^((?:.*))=(.*)$/", $p, $m);
+			print_r($m);
+			continue;
+			$pos = strrpos ($p, "=");
+			$path = substr ($p, 0, $pos);
+			$name = substr ($p, $pos+1);
+			$label = $handler->aaptGetApplicationLabel ($path);
+			$result [$name] = $label;
+			echo $name . "\t | " . $label ."\n";
+		}
+	}
+?>

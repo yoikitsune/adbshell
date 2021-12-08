@@ -1,0 +1,4 @@
+#!/bin/bash
+adb shell pwd 1> /dev/null || exit 1;
+cd -- $(dirname -- "$(readlink -f "$0")")
+bash --init-file init

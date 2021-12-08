@@ -1,0 +1,8 @@
+#!/bin/sh
+. $APP_CONFIG
+if [ $1 = "audio" ]; then
+	type="audio"
+else
+	type="video"
+fi
+echo $bin_path/télécharger "$@" --exec "copier $type"

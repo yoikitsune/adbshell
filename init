@@ -1,0 +1,75 @@
+#!/bin/bash
+. ./config
+
+psearch () {
+	firefox https://www.google.com/search?q=$1
+}
+pinfos () {
+	adb shell dumpsys package $1
+}
+
+adbshell_packages=`adb shell pm list packages | sed -e 's/package:\(.*\)/\1/'`
+
+# this is a custom function that provides matches for the bash autocompletion
+_packages_completion() {
+	COMPREPLY=($(compgen -W "$adbshell_packages" "${COMP_WORDS[1]}"))
+}
+# this line registers our custom autocompletion function to be invoked
+# when completing arguments to the repo command
+complete -F _packages_completion pdisable
+complete -F _packages_completion penable
+complete -F _packages_completion psearch
+complete -F _packages_completion pinfos
+
+_list_dir () {
+	case ${#COMP_WORDS[@]} in
+		2)
+		COMPREPLY=($(compgen -W "video audio" -- "${COMP_WORDS[1]}"))
+		;;
+		3)
+			if [ ${COMP_WORDS[1]} = "video" ]; then
+				cd "$base_source/Videos/"
+			elif [ ${COMP_WORDS[1]} = "audio" ]; then
+				cd "$base_source/Musique/"
+			fi
+			compopt -o default
+			COMPREPLY=()
+			return
+		  local cur=${COMP_WORDS[COMP_CWORD]}
+		  #if [ -z $cur ]; then
+		#	cur="."
+		 # else
+			#cur="$cur*"
+		  #fi
+		  local IFS=$'\n'
+		  #COMPREPLY=( $( ls -p "$cur" ) )
+			compopt -o nospace
+#			if ($cu
+			if [ ${COMP_WORDS[1]} = "video" ]; then
+				local base="$base_source/Videos/"
+				local dir=$base
+				if [ -n $cur ]; then
+					if [ -d "$base$cur" ]; then
+						dir="$base$cur"
+						cur=""
+					else
+						dir=`dirname "$base$cur"`
+						cur=`basename "$base$cur"`
+					fi
+				fi
+
+				COMPREPLY=( $(compgen -W "$( ls -p $dir )" -- $cur ) )
+			fi
+
+		;;
+	esac
+}
+complete -o default -F _list_dir copier
+#complete -F _list_dir copier
+
+export device_name=`adb shell settings get global device_name`;
+export APP_PATH=`pwd`
+export APP_CONFIG=$APP_PATH/config
+export PATH=/usr/bin:$APP_PATH/bin
+
+PS1="$device_name$ "

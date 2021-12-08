@@ -1,0 +1,9 @@
+#!/bin/sh
+/usr/bin/systemctl status gnirehtet.service > /dev/null
+if [ $? = 0 ]; then
+	/usr/bin/sudo /usr/bin/systemctl stop gnirehtet.service
+	[ $? = 0 ] && echo "Reverse tethering arrêté."
+else
+	/usr/bin/sudo /usr/bin/systemctl start gnirehtet.service
+	[ $? = 0 ] && echo "Reverse tethering activé."
+fi
